@@ -1,0 +1,58 @@
+@page
+@model _NET_project0.Pages_Menu.Index2Model
+
+@{
+    ViewData["Title"] = "Thực đơn";
+}
+
+<p>
+    <a asp-page="Create">Thêm món mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Content)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Menu) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Sửa</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+@{
+
+    Func<int?,string> generateUrl = (int? _pagenumber)  => {
+        return Url.Page("./User", new {pageNumber = _pagenumber});
+    };
+
+    var datapaging = new {
+        currentPage = Model.pageNumber,
+        countPages  = Model.totalPages,
+        generateUrl =  generateUrl
+    };
+
+}
+<partial name="_Paging" model="@datapaging" />

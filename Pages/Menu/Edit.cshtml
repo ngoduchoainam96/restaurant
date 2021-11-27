@@ -1,0 +1,47 @@
+@page
+@model _NET_project0.Pages_Menu.EditModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa";
+}
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1>Chỉnh sửa</h1>
+
+<h4>Thực đơn</h4>
+<hr />
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Menu.ID" />
+            <div class="form-group">
+                <label asp-for="Menu.Title" class="control-label"></label>
+                <input asp-for="Menu.Title" class="form-control" />
+                <span asp-validation-for="Menu.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Menu.PublishDate" class="control-label"></label>
+                <input asp-for="Menu.PublishDate" class="form-control" />
+                <span asp-validation-for="Menu.PublishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Menu.Content" class="control-label"></label>
+                <input asp-for="Menu.Content" class="form-control" />
+                <span asp-validation-for="Menu.Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

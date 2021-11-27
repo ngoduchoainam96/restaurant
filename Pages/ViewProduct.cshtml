@@ -1,0 +1,38 @@
+@page "/sanpham/{id:int?}"
+@using razor04.codebehide.Models;
+@model ViewProductModel
+
+
+@if (Model.product != null) {
+    <h2>@Model.product.Name</h2>
+    <p>Mô tả: @Model.product.Desciption</p>
+    <p>Giá: @Model.product.Price</p>
+    <p>
+      <a asp-page="ViewProduct" asp-route-id="">Xem món khác</a>
+    </p>
+
+    
+
+
+}
+else {
+  <link rel="stylesheet" href="/css/site.css" />
+                               <link rel="stylesheet" href="/css/site2.css" />
+                               <link rel="stylesheet" href="/css/site3.css" />
+  <h2>Các món hiện có:</h2>
+  <ul>
+    @foreach (var p in ProductContext.products)
+    {
+        <li>
+          <a asp-page="ViewProduct" asp-route-id="@p.ID">@p.Name</a>
+        </li>
+    }
+  </ul>
+} 
+<a>Thêm món mới</a>
+ <form method="post" class="d-flex">
+    <button class="btn btn-danger m-1" asp-page-handler="xoa">Thêm nhận xét</button>
+    <button class="btn btn-danger m-1" asp-page-handler="soanthao">Soạn thảo</button>
+    <button class="btn btn-danger m-1" asp-page-handler="xemchitiet">Xem chi tiết</button>
+</form>
+<p class="alert alert-danger">@Model.Thongbao</p>

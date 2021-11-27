@@ -1,0 +1,89 @@
+.header{
+    background: #0884c4;
+    color: white;
+  }
+.address{
+    margin-right: -10px;
+  }
+  .vertical {
+    border-left: 1px solid black;
+    height: 40px;
+    position:absolute;
+   margin-left: 55px;
+    margin-top: 22px;
+    margin-right: -100px;
+    
+  }
+  .phone{
+    margin-left: 100px;
+  }
+  .vertical2 {
+    border-left: 1px solid black;
+    height: 40px;
+    position:absolute;
+    left: 50%;
+    margin-top: 22px;
+    margin-left: 130px;
+    margin-right: -200px;
+    
+  }
+  .hours{
+    margin-left: 80px;
+  }
+  .autoplay{
+      left: 17%;
+      width: 1000px;
+      margin-top: -100px;
+  }
+  .autoplay2{
+    left: 17%;
+    width: 1000px;
+    margin-top: -100px;
+    text-align: center;
+}
+  .button1{
+    background: white;
+    margin-top: 10px;
+    margin-left: -20px;
+  
+}
+.button1{
+  margin-top: 100px;
+  background-color: blue;
+}
+  .button2{
+      margin-left: 1000px;
+  }
+  .time{
+      margin-left: 40px;
+  }
+  .dish{
+      margin-left: 47px;
+  }
+  .number{
+      margin-left: 10px;
+  }
+  .infor{
+    text-align: center;
+  }
+  .infor h4{
+    font-family: 'Roboto Condensed', Helvetica,Arial,sans-serif;
+  }
+  .hr{
+    color: orange;
+    left: auto;
+    right: auto;
+    margin-left: 717px;
+    width: 100px;
+  }
+  .table_order:hover{
+    background: gray;
+  }
+  .khauhieu{
+    background: #ebebeb;
+    height: 400px;
+  }
+  .banner{
+    margin-top: 20px;
+    margin-left: -10px;
+  }

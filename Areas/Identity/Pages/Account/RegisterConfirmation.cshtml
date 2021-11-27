@@ -1,0 +1,17 @@
+@page "/RegisterConfirmation/"
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+    //Dòng 14 neu ko dc thi thu @Model.EmailConfirmationUrl
+}
+
+<h1>@ViewData["Title"]</h1>
+@{
+   
+<p>
+    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
+    Normally this would be emailed: <a id="confirm-link" href="@Model.UrlContinue">Click here to confirm your account</a>
+</p>
+    }
+
+

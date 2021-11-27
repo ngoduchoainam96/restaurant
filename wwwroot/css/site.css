@@ -1,0 +1,71 @@
+.body{
+    background: #eeeeee;
+    height: 750px;
+    text-align: center;
+}
+.body2{
+    background: #eeeeee;
+   
+}
+header{
+    float: right;
+}
+.header{
+  background: #0884c4;
+  color: white;
+  font-family: 'Muli', sans-serif;
+}
+.middle_header{
+    background: white;
+    height: 100px;
+  }
+  .restaurant_img{
+    height: 90px;
+    margin-right: 150px;
+  }
+  .sign{
+      background: #0d6efd;
+      color: white;
+      height: 45px;
+  }
+  
+  .sign a{
+    
+    color: white;
+}
+  .bar{
+      margin-top: -620px;
+  }
+.home_button{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Muli', sans-serif;
+}
+.menu_button{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Muli', sans-serif;
+}
+.table{
+    background: white;
+    height: 510px;
+    width: 1000px;
+}
+.form{
+    border: solid 1px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 300px;
+}
+.table_order{
+    background: #0d6efd;
+    border-radius: 10px;
+    color: white;
+}
+.sign2{
+    color: white;
+}

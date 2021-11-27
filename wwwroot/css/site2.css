@@ -1,0 +1,21 @@
+
+.img{
+    height: 300px;
+    width: 1000px;
+  }
+  .img2{
+    float: left;
+    margin-left: 100px;
+    height: 270px;
+    width: 450px;
+  }
+  .header{
+    background: #0884c4;
+    color: white;
+  }
+  .time{
+    margin-left: 20px;
+}
+.number{
+  margin-left: 10px;
+}

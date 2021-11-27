@@ -1,0 +1,56 @@
+@page
+  @using System;
+  @{
+      ViewData["Title"] = "Đặt bàn";
+
+      @functions {
+
+          dynamic customerinfo {set;  get;}
+
+          public void OnPost() {
+
+              string customername = Request.Form["customername"];
+              string email = Request.Form["email"];
+              
+
+              customerinfo =
+              new {
+                  customername = customername,
+                  email = email,
+                  
+              };
+
+
+          }
+        }
+  }
+
+
+ @{
+     if (customerinfo != null)
+     {
+        <h3>Món đã đặt: </h3>
+        <div class="card">
+            <div class="card-body">
+                <p><strong>Tên: </strong> @customerinfo.customername</p>
+                <p><strong>Số lượng: </strong> @customerinfo.email</p>
+                
+            </div>
+        </div>
+     }
+ }  
+Trang chủ >> Dịch vụ >> Đặt bàn
+  <h3 class="display-4">Nhập thông tin</h3>
+  <form method="post" class="m-2 p-3 bg-light">
+      <div class="form-group">
+          <label for="customername">Thời gian:</label>
+          <input class="form-control" type="text" name="customername" value="" />
+      </div>
+      <div class="form-group">
+          <label for="email">Số lượng:</label>
+          <input class="form-control" type="email" name="email" value="" />
+      </div>
+      <div class="form-group">
+          <input class="btn btn-danger" type="submit" value="Gửi dữ liệu" />
+      </div>
+  </form>

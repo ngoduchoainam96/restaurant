@@ -1,0 +1,36 @@
+@page "/admin/role/"
+@model IndexModel
+
+<h3>Danh sách các vai trò</h1>
+<partial name="_StatusMessage" model="@Model.StatusMessage" />
+
+<form method="POST" class="my-1 d-inline">
+    <button class="btn btn-secondary" asp-page="./Add" 
+            asp-page-handler="StartNewRole">Thêm mới vai trò</button>
+</form>
+<a class="btn btn-secondary" asp-page="./User">Gán vai trò cho người dùng</a>
+
+<table class="table">
+  <tr>
+    <th>ID vai trò</th>
+    <th>Tên</th>
+    <th>Tác vụ</th>
+  </tr>
+  @foreach (var role in @Model.roles)
+  {
+      <tr>
+        <td>@role.Id</td>
+        <td>@role.Name</td>
+        <td>
+            <form method="POST" class="d-inline">
+              <button name="Input.ID" value="@role.Id" class="btn btn-success btn-sm" 
+                      asp-page="./Add" asp-page-handler="StartUpdate">Cập nhật vai trò</button>
+            </form>
+            <form method="POST" class="d-inline">
+              <button name="Input.ID" value="@role.Id" class="btn btn-success btn-sm" 
+                      asp-page="./Delete">Xóa vai trò</button>
+            </form>
+        </td>
+      </tr>
+  }
+</table>
